@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>CV Information Form</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="/script.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+</head>
+
+<body>
+    <div id="left">
+          <h1>CV Information Form</h1>
+    <form action="submit_cv.php" method="post">
+        <h2>Personal Information</h2>
+        <h2>Photo</h2>
+        <label for="photo1">Photo 1:</label>
+        <input type="file" id="photo1" name="photo1"><br>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required><br>
+
+        <label for="state">State/Province:</label>
+        <input type="text" id="state" name="state" required><br>
+
+        <label for="postal">Postal Code:</label>
+        <input type="text" id="postal" name="postal" required><br>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required><br>
+
+        <h2>Professional Summary</h2>
+        <textarea id="summary" name="summary" rows="4" cols="50" required></textarea><br>
+
+        <h2>Education</h2>
+        <label for="highest-education">Highest Level of Education:</label>
+        <input type="text" id="highest-education" name="highest_education" required><br>
+
+        <label for="degree">Degree/Certification:</label>
+        <input type="text" id="degree" name="degree" required><br>
+
+        <label for="institution">Name of Institution:</label>
+        <input type="text" id="institution" name="institution" required><br>
+
+        <label for="completion-year">Year of Completion:</label>
+        <input type="text" id="completion-year" name="completion_year" required><br>
+
+        <h2>Additional Education/Training</h2>
+        <label for="additional-degree">Degree/Certification:</label>
+        <input type="text" id="additional-degree" name="additional_degree" required><br>
+
+        <label for="additional-institution">Name of Institution:</label>
+        <input type="text" id="additional-institution" name="additional_institution" required><br>
+
+        <label for="additional-completion-year">Year of Completion:</label>
+        <input type="text" id="additional-completion-year" name="additional_completion_year" required><br>
+
+        <div class="job">
+
+            <h2>Work Experience</h2>
+            <h3>Job 1</h3>
+            <label for="job1-title">Job Title:</label>
+            <input type="text" id="job1-title" name="job1_title" required><br>
+            
+            <label for="job1-company">Company/Organization:</label>
+            <input type="text" id="job1-company" name="job1_company" required><br>
+            
+            <label for="job1-employment-period">Employment Period:</label>
+            <input type="text" id="job1-employment-period" name="job1_employment_period" required><br>
+            
+            <label for="job1-responsibilities">Responsibilities and Achievements:</label>
+            <textarea id="job1-responsibilities" name="job1_responsibilities" rows="4" cols="50" required></textarea>
+            <br>
+            <button class="insert">+</button>
+        </div>
+            
+            
+            
+            <h2>Skills</h2>
+        <textarea id="skills" name="skills" rows="4" cols="50" required></textarea><br>
+
+        <h2>Certifications</h2>
+        <textarea id="certifications" name="certifications" rows="4" cols="50" required></textarea><br>
+
+        <h2>Mother Language</h2>
+        <select id="languages" name="languages" required>
+            <option value="" selected disabled>Select language...</option>
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+            <option value="German">German</option>
+            <!-- Add more language options as needed -->
+        </select><br>
+
+        <h2>Additional Information</h2>
+        <textarea id="additional-info" name="additional_info" rows="4" cols="50"></textarea><br>
+
+        <input type="submit" value="Submit" id="Submit">
+    </form>
+    </div>
+    <div id="right">
+        <h2>Personal Infromation</h2>
+        <div id="personal">
+
+            <div id="photo"></div>
+            <div id="personal2">
+
+                <img src="" alt="" id="fotoUserit">
+                <div>
+                        <p class="name"></p>
+                <p class="email"></p>
+                <p class="phone"></p>
+                </div>
+            <div>
+                     <p class="address"></p>
+                <p class="city"></p>
+                <p class="state"></p>
+                <p class="postal"></p>
+                <p class="country"></p>
+            </div>
+           
+            </div>
+        </div>
+<hr>
+      <h2>Proffesional <Summary></Summary></h2>
+      <p class="summary"></p>
+      <h2>Education <Summary></Summary></h2>
+      <p class="hle"><b> Highest Level of Education:</b> </p>
+      <p class="degree"><b>Degree: </b></p>
+      <p class="institution"><b>Institution: </b></p>
+      <p class="vitiDiplomimit"><b>Year of Completion: </b></p>
+        <button id="downloadBtn">Download</button>
+    </div>
+</body>
+
+</html>
+
